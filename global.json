@@ -1,0 +1,44 @@
+{
+"sni": {
+  "prefix": ["sni"],
+  "body": [",\"${1}\": {"
+  ,"  \"prefix\": [\"${2}\"],"
+  ,"  \"body\": [\"${3}\"]"
+  ,"  \", description\": \"${4}\""
+  ,"}"]
+  , "description": "create snippet"
+}
+
+,"git_all_commit": {
+  "prefix": ["git_all_commit"],
+  "body": ["git add . && git commit -m '${1}' && git push"]
+  , "description": "stage all, commit, push"
+}
+,"git_checkout_remote": {
+  "prefix": ["git_checkout_remote"],
+  "body": ["git fetch --all && git branch -r | grep ${1} | cut -d '/' -f 2 | xargs -t -I{} git checkout -b {} origin/{}"]
+  , "description": "grep remote branch, checkout"
+}
+,"git_checkout_local": {
+  "prefix": ["git_checkout_local"],
+  "body": ["git branch | grep ${1} | xargs -t -I{} git checkout {}"]
+  , "description": "grep local branch, checkout"
+}
+,"diffdev": {
+  "prefix": ["diffdev"],
+  "body": ["git merge origin/develop && git diff origin/develop > ~/.uranometria/stella/${1}.diff && grep -c '^@@' ~/.uranometria/stella/${1}.diff | xargs -I{} echo diffcount = {} && grep -c '^diff' ~/.uranometria/stella/${1}.diff | xargs -I{} echo diff_filecount = {}"]
+  , "description": "merge develop, touch diff file"
+}
+
+,"plantuml": {
+  "prefix": ["pu"],
+  "body": ["@startuml"
+  ,"|${1}|"
+  ,"start"
+  ,":${2};"
+  ,"stop"]
+  , "description": "plantuml template"
+}
+
+
+}
