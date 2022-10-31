@@ -2,32 +2,50 @@ echo "=========================================================="
 echo ">>> (0/7). START"
 echo ">>> (1/7). MAKE ~/.uranometria/* (if exist skip, add necronomicon)"
 mkdir -p ~/.uranometria/forge/snips ~/.uranometria/stella ~/.uranometria/zodiac
-cp -f ~/.local/zzz/dictionary_english.dat ~/.uranometria/forge
 cat - << "EOF" >> ~/.uranometria/necronomicon.md
-# necronomicon
-
-# ==========================================================
 # note
+{{{
+	- note1
+		> description
+}}}
 
-# ==========================================================
 # tasks
-- [ status] sample title
-	> description
+{{{
+	- [ status] sample title
+		> description
+}}}
 
-# ==========================================================
 # issue
+{{{
+	- issue1
+		> description
+}}}
 
-# ==========================================================
 # static snippets
-git status
-git fetch --all
-git pull
-git checkout . && git clean -df && git status
+{{{
+	- git
+		git status
+		git fetch --all
+		git pull
+		git checkout . && git clean -df && git status
+		git status --short
+		git status --short | awk '{print $2}' | xargs
+		git log -n 3
+		git log --no--merges origin/develop..target_branch
+		git show commitid
+	- kind 1
+		some command and so on
+		some command and so on
+}}}
 
-# ==========================================================
 # archive
-yyyy-mm-dd
-- some archive
+{{{
+	- 2022-11-03
+		- [ status] sample title
+			> description
+		- [ status] sample title
+			> description
+}}}
 
 EOF
 echo ">>> (2/7). MAKE ~/.uranometria/forge/backup.sh (over write)"
@@ -65,8 +83,7 @@ rm -rf ~/.vim ~/.local
 EOF
 chmod 777 ~/.uranometria/forge/kill.sh
 echo ">>> (5/7). MAKE ~/.vimrc (over write)"
-cat ~/.local/zzz/.vimrc > ~/.vimrc
-cp -f ~/.vimrc ~/.uranometria/forge/
+echo "source ~/.local/zzz/.vimrc" > ~/.vimrc
 echo ">>> (6/7). MAKE ~/.uranometria/forge/snips/global.json (add write)"
 cat ~/.local/zzz/global.json >> ~/.uranometria/forge/snips/global.json
 echo ">>> (7/7). END"
