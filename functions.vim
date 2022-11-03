@@ -26,7 +26,7 @@ let s:colorscheme_arr = [
       \ 'materialbox'
       \ ]
 function! ChangeColor()
-  if glob('~/.vim/pack/plugins/start/awesome-vim-colorschemes') != ''
+  if glob('~/.vim/pack/plugins/start') != ''
     execute('colorscheme ' . s:colorscheme_arr[localtime() % len(s:colorscheme_arr)])
   endif
 endfunction

@@ -47,8 +47,8 @@ set incsearch
 au QuickFixCmdPost *grep* cwindow
 
 " completion ----------------------------------
-set dictionary+=./dictionary.dat
-set thesaurus+=./dictionary.dat
+set dictionary+=~/.local/zzz/dictionary.dat
+set thesaurus+=~/.local/zzz/dictionary.dat
 set wildmenu
 set complete=.,w,b,u,U,k,kspell,s,i,d,t
 set completeopt=menuone,noinsert,preview,popup
