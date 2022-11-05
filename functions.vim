@@ -16,6 +16,7 @@ function! Timer()
 endfunction
 
 " change color --------------------------------
+" TODO
 let s:colorscheme_arr = [
       \ 'onedark',
       \ 'hybrid_material',

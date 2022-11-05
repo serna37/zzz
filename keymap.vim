@@ -12,6 +12,11 @@ nmap <Leader><Leader>e :NERDTreeFind<CR>zz
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
+if has('win32unix')
+  nmap <Leader>f :CtrlP<CR>
+  nmap <Leader>b :CtrlPBuffer<CR>
+  nmap <Leader>h :CtrlPMRUFiles<CR>
+endif
 
 " search ---------------------------------------
 nmap <Leader>gg :call GrepCurrentExtention()<CR>
