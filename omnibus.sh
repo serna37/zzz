@@ -40,6 +40,6 @@ repos=(
 for v in ${repos[@]}; do
   git clone --depth 1 "https://github.com/${v}"
 done
-sh fonts/install.sh
+#sh fonts/install.sh
 #sh nerd-fonts/install.sh
 fzf/install --no-key-bindings --no-completion --update-rc
