@@ -16,15 +16,17 @@ function! Timer()
 endfunction
 
 " change color --------------------------------
-" TODO
 let s:colorscheme_arr = [
       \ 'onedark',
+      \ 'onehalfdark',
       \ 'hybrid_material',
       \ 'molokai',
       \ 'gruvbox',
-      \ 'space-vim-dark',
       \ 'jellybeans',
-      \ 'materialbox'
+      \ 'materialbox',
+      \ 'afterglow',
+      \ 'alduin',
+      \ 'apprentice'
       \ ]
 function! ChangeColor()
   if glob('~/.vim/pack/plugins/start') != ''
