@@ -1,3 +1,6 @@
+" startify ----------------------------------
+let g:startify_change_to_dir = 0
+
 " airline ----------------------------------
 let g:airline_theme = 'deus'
 let g:airline#extensions#tabline#enabled = 1
