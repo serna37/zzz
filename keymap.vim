@@ -40,6 +40,11 @@ nmap mm :call Marking()<CR>
 nmap <Leader>q :noh<CR>
 
 " window ---------------------------------------
+nmap <C-k> <C-w>k
+nmap <C-j> <C-w>j
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+
 nmap <C-p> :bn<CR>
 nmap <C-q> :bp<CR>
 nmap <Leader>x :call CloseBuf()<CR>
