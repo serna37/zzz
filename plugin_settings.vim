@@ -14,6 +14,7 @@ let g:NERDTreeShowHidden = 1
 " search -----------------------------------
 set rtp+=~/.vim/pack/plugins/start/fzf
 let g:ctrlp_map = '<>'
+let g:ctrlp_working_path_mode = 'w'
 
 " motion -----------------------------------
 let g:comfortable_motion_interval = 1000.0 / 60
