@@ -45,9 +45,9 @@ nmap <C-j> <C-w>j
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 
-nmap <C-p> :bn<CR>
-nmap <C-q> :bp<CR>
-nmap <Leader>x :call CloseBuf()<CR>
+"nmap <C-p> :bn<CR>
+"nmap <C-q> :bp<CR>
+"nmap <Leader>x :call CloseBuf()<CR>
 
 nmap <Leader>t :call TerminalPop()<CR>
 
