@@ -1,8 +1,8 @@
 mkdir -p ~/.vim/pack/plugins/start && cd ~/.vim/pack/plugins/start
 repos=(
 'mhinz/vim-startify'
-#'vim-airline/vim-airline'
-#'vim-airline/vim-airline-themes'
+'vim-airline/vim-airline'
+'vim-airline/vim-airline-themes'
 'rafi/awesome-vim-colorschemes'
 'sheerun/vim-polyglot'
 'uiiaoo/java-syntax.vim'
