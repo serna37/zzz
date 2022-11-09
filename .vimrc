@@ -30,7 +30,7 @@ call ChangeColor()
 " status line ---------------------------------
 set ruler
 set laststatus=2
-set statusline=%F%m%r%h%w%=[all]_%p%%__[row]_%l/%L__[col]_%02v__[%{&fenc!=''?&fenc:&enc}]
+set statusline=%F%m%r%h%w%=[all]%p%%_[row]%l/%L_[col]%02v_[%{&fenc!=''?&fenc:&enc}]
 let ff_table = {'dos' : 'CRLF', 'unix' : 'LF', 'mac' : 'CR' }
 set statusline+=[%{ff_table[&ff]}]
 
