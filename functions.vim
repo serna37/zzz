@@ -17,13 +17,9 @@ endfunction
 
 " change color --------------------------------
 let s:colorscheme_arr = [
-      \ 'onedark',
-      \ 'onehalfdark',
       \ 'hybrid_material',
       \ 'molokai',
-      \ 'gruvbox',
       \ 'jellybeans',
-      \ 'materialbox',
       \ 'afterglow',
       \ 'alduin',
       \ 'apprentice'
