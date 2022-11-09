@@ -40,6 +40,9 @@ nmap mm :call Marking()<CR>
 nmap <Leader>q :noh<CR>
 
 " window ---------------------------------------
+nmap <Leader>nn :set norelativenumber<CR>
+nmap <Leader>nr :set relativenumber<CR>
+
 nmap <C-k> <C-w>k
 nmap <C-j> <C-w>j
 nmap <C-h> <C-w>h
@@ -62,6 +65,6 @@ inoremap <expr> <S-Tab> pumvisible() ? '<C-p>' : '<S-Tab>'
 inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 
 " favorite ---------------------------------------
-nmap <Leader>n :Necronomicon 
+nmap <Leader><Leader>n :Necronomicon 
 nmap <Leader><Leader>w :call RunCat()<CR>
-nmap <Leader>ce :call execute('top terminal ++shell eval ' . getline('.'))<CR>
+nmap <Leader><Leader>ce :call execute('top terminal ++shell eval ' . getline('.'))<CR>
