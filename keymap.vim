@@ -28,7 +28,7 @@ nmap <Leader>o :LspDefinition<CR>
 nmap <Leader>r :LspReferences<CR>
 
 " search/mark/jump ---------------------------------------
-nmap <Leader>w <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-overwin-f2)
 nmap <Leader>s <Plug>(easymotion-sn)
 
 nmap <Leader>* <Plug>(quickhl-manual-this)
