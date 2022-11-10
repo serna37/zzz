@@ -1,9 +1,6 @@
 " base ---------------------------------------
 let g:mapleader = "\<Space>"
 
-" looks ---------------------------------------
-nmap <Leader>cc :call ChangeColor()<CR>:colorscheme<CR>
-
 " exploere  ---------------------------------------
 nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader><Leader>e :NERDTreeFind<CR>zz
@@ -27,17 +24,15 @@ nmap <Leader>p :LspPeekDefinition<CR>
 nmap <Leader>o :LspDefinition<CR>
 nmap <Leader>r :LspReferences<CR>
 
-" search/mark/jump ---------------------------------------
-nmap <Leader>w <Plug>(easymotion-overwin-f2)
+" jump ---------------------------------------
+nmap <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>s <Plug>(easymotion-sn)
 
-nmap <Leader>* <Plug>(quickhl-manual-this)
-nmap <Leader><Leader>* <Plug>(quickhl-manual-reset)
+nnoremap * <Plug>(quickhl-manual-this)*N
+nmap <Leader>q <Plug>(quickhl-manual-reset):noh<CR>
 
 nmap <Leader>m :marks abcdefghijklmnopqrstuvwxyz<CR>:normal! `
 nmap mm :call Marking()<CR>
-
-nmap <Leader>q :noh<CR>
 
 " window ---------------------------------------
 nmap <Leader>nn :set norelativenumber<CR>
@@ -67,4 +62,5 @@ inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 " favorite ---------------------------------------
 nmap <Leader><Leader>n :Necronomicon 
 nmap <Leader><Leader>w :call RunCat()<CR>
+nmap <Leader><Leader>cc :call ChangeColor()<CR>:colorscheme<CR>
 nmap <Leader><Leader>ce :call execute('top terminal ++shell eval ' . getline('.'))<CR>
