@@ -5,12 +5,7 @@ function! Timer()
   if now_hour != s:ini_hour
     let s:ini_hour = now_hour
     call ChangeColor()
-    call popup_create([
-          \ strftime('%Y/%m/%d %H:%M (%A)', localtime()),
-          \ '',
-          \ 'colorscheme: ' . execute('colorscheme')
-          \],
-          \ #{border: [], zindex: 999, time: 3500})
+    call Zihou()
     call timer_start(1000, { -> RunCat() })
   endif
 endfunction
@@ -99,6 +94,15 @@ function! Necronomicon(...) abort
     smile
     return
   endif
+endfunction
+
+function! Zihou()
+  call popup_create([
+        \ strftime('%Y/%m/%d %H:%M (%A)', localtime()),
+        \ '',
+        \ 'colorscheme: ' . execute('colorscheme')
+        \],
+        \ #{border: [], zindex: 999, time: 3500})
 endfunction
 
 function! RunCat()

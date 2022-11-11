@@ -23,7 +23,7 @@ let g:comfortable_motion_air_drag = 5.0
 
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
-let g:EasyMotion_keys='wasdjkhlnmf'
+let g:EasyMotion_keys='swadjkhlnmf'
 
 " zen --------------------------------------
 let g:goyo_width = 100
@@ -31,7 +31,8 @@ let g:limelight_conceal_ctermfg = 'DarkGray'
 au User GoyoEnter Limelight
 au User GoyoLeave Limelight!
 
-" completion --------------------------------
+" edit --------------------------------
+let g:sandwich_no_default_key_mappings = 1
 let g:vsnip_snippet_dir = '~/.uranometria/forge/snips'
 
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({

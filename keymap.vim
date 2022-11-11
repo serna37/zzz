@@ -25,13 +25,18 @@ nmap <Leader>o :LspDefinition<CR>
 nmap <Leader>r :LspReferences<CR>
 
 " jump ---------------------------------------
+nmap s <Plug>(easymotion-bd-w)w
 nmap <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>s <Plug>(easymotion-sn)
 
-nnoremap * *N
-nnoremap # #N
+nnoremap * *N<Plug>(quickhl-manual-this)
+nnoremap # #N<Plug>(quickhl-manual-this)
 nmap " <Plug>(quickhl-manual-this)
 nmap <Leader>q <Plug>(quickhl-manual-reset):noh<CR>
+if has('win32unix')
+  nnoremap * *N
+  nnoremap # #N
+endif
 
 nmap <Leader>m :marks abcdefghijklmnopqrstuvwxyz<CR>:normal! `
 nmap mm :call Marking()<CR>
@@ -56,7 +61,11 @@ nmap <Leader>l :Limelight!!<CR>
 
 nmap <Leader>0 :VsnipOpen<CR>
 
-" completion ---------------------------------------
+" edit ---------------------------------------
+"nmap za <Plug>(sandwich-add)
+"nmap zd <Plug>(sandwich-delete)
+"nmap zr <Plug>(sandwich-replace)
+
 imap <expr> <Tab> pumvisible() ? '<C-n>' : vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : '<C-n>'
 inoremap <expr> <S-Tab> pumvisible() ? '<C-p>' : '<S-Tab>'
 inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
