@@ -28,7 +28,9 @@ nmap <Leader>r :LspReferences<CR>
 nmap <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>s <Plug>(easymotion-sn)
 
-nnoremap * *N<Plug>(quickhl-manual-this)
+nnoremap * *N
+nnoremap # #N
+nmap " <Plug>(quickhl-manual-this)
 nmap <Leader>q <Plug>(quickhl-manual-reset):noh<CR>
 
 nmap <Leader>m :marks abcdefghijklmnopqrstuvwxyz<CR>:normal! `
